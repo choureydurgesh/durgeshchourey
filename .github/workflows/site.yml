@@ -51,7 +51,7 @@ jobs:
 
       - name: Collect site files
         if: env.HAS_TOKEN == 'true'
-        run: mkdir dist && cp -r index.html styles.css assets dist/
+        run: mkdir dist && cp -r index.html styles.css main.js assets dist/
 
       - name: Deploy
         if: env.HAS_TOKEN == 'true'

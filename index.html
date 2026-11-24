@@ -3,178 +3,595 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Durgesh Chourey · DevOps &amp; Platform Engineer</title>
-  <meta name="description" content="Durgesh Chourey, DevOps, Platform and DevSecOps engineer in Helmond, the Netherlands. 10+ years of Linux software for regulated machines, now automating, securing and observing software delivery.">
+  <title>Durgesh Chourey · Embedded &amp; DevOps Engineer</title>
+  <meta name="description" content="Durgesh Chourey, Embedded Software and DevOps Engineer in Helmond, the Netherlands. 10+ years of Linux and C++ in regulated industries, now building secure, observable delivery platforms.">
   <link rel="canonical" href="https://durgeshchourey.com/">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://durgeshchourey.com/">
-  <meta property="og:title" content="Durgesh Chourey · DevOps &amp; Platform Engineer">
-  <meta property="og:description" content="10+ years of Linux software for regulated machines. Now automating, securing and observing software delivery from commit to production.">
+  <meta property="og:title" content="Durgesh Chourey · Embedded &amp; DevOps Engineer">
+  <meta property="og:description" content="Bridging real-time Linux and C++ systems with cloud-native infrastructure. 10+ years in medical, rail, printing, agriculture and semiconductor.">
   <meta property="og:image" content="https://durgeshchourey.com/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+    // Apply the saved or system theme before first paint.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('dc-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <div class="layout">
-    <header class="side">
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap header-row">
+      <a class="logo" href="#top">
+        <span class="logo-mark">DC.</span>
+        <span class="logo-text"><b>Durgesh Chourey</b><small>Embedded &amp; DevOps</small></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch between light and dark mode">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+        <a class="btn btn-dark btn-sm hide-xs" href="#contact">Contact Me <span aria-hidden="true">&rarr;</span></a>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+      <a href="#about">About</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="about">
+      <div class="wrap" id="top">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="pill"><span class="pulse" aria-hidden="true"></span>Helmond, Netherlands · 10+ years experience</p>
+            <h1>Durgesh Chourey</h1>
+            <p class="hero-role">Embedded Software &amp; DevOps Engineer: <span class="c-blue">bridging real-time Linux and C++ systems</span> with <span class="c-teal">cloud-native infrastructure.</span></p>
+            <p class="hero-sum">Over a decade of Linux and C++ engineering for machines where failure is expensive: medical devices at Philips and GE HealthCare, locomotives at Alstom, milking robots at Lely, production printers at Canon and lithography test benches at ASML. Today I pair that embedded rigour with Kubernetes, Terraform and DevSecOps automation to ship faster and more safely.</p>
+            <div class="hero-actions">
+              <a class="btn btn-blue" href="#case-studies">View Case Studies <span aria-hidden="true">&darr;</span></a>
+              <button class="btn btn-light js-copy" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                Copy Email
+              </button>
+              <a class="btn btn-light" href="https://www.linkedin.com/in/durgeshchourey" rel="noopener">
+                <svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                LinkedIn
+              </a>
+              <a class="btn btn-light" href="https://github.com/choureydurgesh" rel="noopener">GitHub</a>
+            </div>
+          </div>
+
+          <!-- Architecture card -->
+          <div class="arch-card">
+            <div class="arch-head">
+              <span class="arch-title"><span class="sq" aria-hidden="true"></span>Edge-to-Cloud Architecture</span>
+              <span class="arch-tag">SYS_SPEC v2.6</span>
+            </div>
+            <svg class="arch" viewBox="0 0 420 278" role="img" aria-label="Three layers: embedded and real-time, CI/CD and infrastructure as code, cloud and observability">
+              <rect class="d-box" x="8" y="8" width="404" height="72" rx="10"/>
+              <rect class="d-bar-teal" x="8" y="8" width="5" height="72" rx="2.5"/>
+              <text class="d-h d-h-teal" x="24" y="29">01 // EMBEDDED &amp; REAL-TIME</text>
+              <rect class="d-pill" x="24" y="40" width="60" height="24" rx="5"/><text class="d-t" x="54" y="56">C / C++</text>
+              <rect class="d-pill" x="92" y="40" width="84" height="24" rx="5"/><text class="d-t" x="134" y="56">Yocto / BSP</text>
+              <rect class="d-pill" x="184" y="40" width="82" height="24" rx="5"/><text class="d-t" x="225" y="56">CAN / SPI</text>
+              <rect class="d-pill" x="274" y="40" width="124" height="24" rx="5"/><text class="d-t" x="336" y="56">500 Hz control</text>
+
+              <line class="d-link" x1="210" y1="80" x2="210" y2="103"/>
+              <polygon class="d-arrow-blue" points="205,98 215,98 210,104"/>
+
+              <rect class="d-box" x="8" y="104" width="404" height="72" rx="10"/>
+              <rect class="d-bar-blue" x="8" y="104" width="5" height="72" rx="2.5"/>
+              <text class="d-h d-h-blue" x="24" y="125">02 // CI/CD &amp; INFRASTRUCTURE AS CODE</text>
+              <rect class="d-pill" x="24" y="136" width="106" height="24" rx="5"/><text class="d-t" x="77" y="152">GitHub Actions</text>
+              <rect class="d-pill" x="138" y="136" width="70" height="24" rx="5"/><text class="d-t" x="173" y="152">Jenkins</text>
+              <rect class="d-pill" x="216" y="136" width="84" height="24" rx="5"/><text class="d-t" x="258" y="152">Terraform</text>
+              <rect class="d-pill" x="308" y="136" width="90" height="24" rx="5"/><text class="d-t" x="353" y="152">Ansible</text>
+
+              <line class="d-link" x1="210" y1="176" x2="210" y2="199"/>
+              <polygon class="d-arrow-teal" points="205,194 215,194 210,200"/>
+
+              <rect class="d-box" x="8" y="200" width="404" height="72" rx="10"/>
+              <rect class="d-bar-ink" x="8" y="200" width="5" height="72" rx="2.5"/>
+              <text class="d-h d-h-ink" x="24" y="221">03 // CLOUD, CONTAINERS &amp; OBSERVABILITY</text>
+              <rect class="d-pill" x="24" y="232" width="58" height="24" rx="5"/><text class="d-t" x="53" y="248">AWS</text>
+              <rect class="d-pill" x="90" y="232" width="92" height="24" rx="5"/><text class="d-t" x="136" y="248">Kubernetes</text>
+              <rect class="d-pill" x="190" y="232" width="64" height="24" rx="5"/><text class="d-t" x="222" y="248">Argo CD</text>
+              <rect class="d-pill" x="262" y="232" width="136" height="24" rx="5"/><text class="d-t" x="330" y="248">Grafana LGTM</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Metrics -->
+        <dl class="metrics">
+          <div><dt>Production engineering</dt><dd>10+ yrs</dd></div>
+          <div><dt>Medical, rail, print, agri, semicon</dt><dd class="c-blue">5 domains</dd></div>
+          <div><dt>CI gates on every pull request</dt><dd class="c-teal">10 gates</dd></div>
+          <div><dt>Merge to production</dt><dd>&lt; 5 min</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Case studies -->
+    <section class="section" id="case-studies">
+      <div class="wrap">
+        <div class="section-head split">
+          <div>
+            <p class="eyebrow c-blue">Selected Engineering Work</p>
+            <h2>Featured Case Studies</h2>
+            <p class="section-sub">Open any project to see its architecture, what I built and the stack.</p>
+          </div>
+          <div class="tabs" role="group" aria-label="Filter case studies">
+            <button class="tab" type="button" data-filter="all" aria-pressed="true">All (6)</button>
+            <button class="tab" type="button" data-filter="cloud" aria-pressed="false">Cloud &amp; DevOps</button>
+            <button class="tab" type="button" data-filter="embedded" aria-pressed="false">Embedded &amp; Real-Time</button>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article class="card" data-cat="cloud">
+            <div class="card-top"><span class="badge badge-blue">Cloud &amp; DevOps</span><span class="when">2026</span></div>
+            <h3>BelastingBuddy: DevSecOps &amp; GitOps Platform</h3>
+            <p class="client">Personal project · belastingbuddy.com</p>
+            <p>A Dutch tax guide for expats, run as a production platform: ten security and quality gates per pull request, multi-arch images, GitOps delivery to Kubernetes and full observability.</p>
+            <div class="card-foot">
+              <ul class="chips"><li>GitHub Actions</li><li>Argo CD</li><li>Terraform</li><li>Trivy</li><li class="more">+6</li></ul>
+              <button class="link-btn" type="button" data-open="cs-belastingbuddy">Inspect Architecture <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="cloud">
+            <div class="card-top"><span class="badge badge-blue">Cloud &amp; DevOps</span><span class="when">2026</span></div>
+            <h3>KlaarVoorNL: Dutch Learning Platform</h3>
+            <p class="client">Personal project · klaarvoornl.com</p>
+            <p>Lessons and practice exams from A0 to B2 for the Inburgeringsexamen and Staatsexamen NT2, with server-side grading, AI writing feedback and a real-time multiplayer quiz.</p>
+            <div class="card-foot">
+              <ul class="chips"><li>Next.js</li><li>Supabase</li><li>Claude API</li><li>Playwright</li></ul>
+              <button class="link-btn" type="button" data-open="cs-klaarvoornl">Inspect Architecture <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="embedded">
+            <div class="card-top"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">Apr – Aug 2025</span></div>
+            <h3>500 Hz High-Speed Media Transport Control</h3>
+            <p class="client">Canon Production Printing · via Brunel · Venlo</p>
+            <p>Real-time C++ control for a high-speed production printing platform: sheet registration, print-belt synchronisation and fault handling, with loops running up to 500 Hz.</p>
+            <div class="card-foot">
+              <ul class="chips"><li>C++</li><li>RTist</li><li>Simulink</li><li>Diagnostics</li></ul>
+              <button class="link-btn" type="button" data-open="cs-canon">Inspect Architecture <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="embedded">
+            <div class="card-top"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">2024 – 2025</span></div>
+            <h3>Medical Device Firmware &amp; CI/CD</h3>
+            <p class="client">Philips · via Yacht · Eindhoven</p>
+            <p>STM32 firmware features for an IPL medical device, including an SPI driver for external flash, plus Azure DevOps pipelines for automated builds and tests in a regulated SAFe setting.</p>
+            <div class="card-foot">
+              <ul class="chips"><li>C++</li><li>STM32</li><li>SPI</li><li>Azure DevOps</li><li class="more">+3</li></ul>
+              <button class="link-btn" type="button" data-open="cs-philips">Inspect Architecture <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="embedded">
+            <div class="card-top"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">2019 – 2022</span></div>
+            <h3>Rail &amp; Robotics Embedded Linux</h3>
+            <p class="client">Alstom and Lely · via Dekimo</p>
+            <p>Jenkins build automation and a Gentoo migration for hybrid-locomotive diagnostics, and a Debian 8 to 10 migration with least-privilege hardening for milking robots.</p>
+            <div class="card-foot">
+              <ul class="chips"><li>Embedded Linux</li><li>Jenkins</li><li>Debian</li><li>systemd</li><li class="more">+2</li></ul>
+              <button class="link-btn" type="button" data-open="cs-rail">Inspect Architecture <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="embedded">
+            <div class="card-top"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">2015 – 2019</span></div>
+            <h3>Medical Imaging Middleware</h3>
+            <p class="client">GE HealthCare · via Capgemini · Bengaluru</p>
+            <p>Object-oriented C++ middleware on Linux for medical systems, handling sensor data acquisition, processing and hand-off, from requirements to verified release.</p>
+            <div class="card-foot">
+              <ul class="chips"><li>C++</li><li>Linux</li><li>CppUnit</li><li>SRS / SDD</li></ul>
+              <button class="link-btn" type="button" data-open="cs-ge">Inspect Architecture <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section-alt" id="experience">
+      <div class="wrap">
+        <div class="section-head split">
+          <div>
+            <p class="eyebrow c-teal">Career Progression</p>
+            <h2>Professional Experience</h2>
+          </div>
+          <button class="btn btn-ghost btn-sm mono" id="toggle-all" type="button">Expand All Details</button>
+        </div>
+
+        <ol class="timeline">
+          <li class="current">
+            <details open>
+              <summary>
+                <span class="s-main"><span class="s-co">ASML <span class="badge badge-teal badge-xs">Current</span></span><span class="s-role">Software Integration &amp; Test Automation Engineer</span><span class="s-loc">via Brunel · Eindhoven</span></span>
+                <span class="s-when">Sep 2026 – Present</span>
+              </summary>
+              <ul class="bullets">
+                <li>Designing and building a software test framework that automates validation of lithography system test benches.</li>
+                <li>Integrating software components and verifying them on test benches.</li>
+                <li>Working on Linux in a multidisciplinary, high-tech engineering environment.</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details open>
+              <summary>
+                <span class="s-main"><span class="s-co">Brunel</span><span class="s-role">DevOps &amp; Platform Engineer: upskilling and portfolio project</span><span class="s-loc">Eindhoven</span></span>
+                <span class="s-when">Jan – Aug 2026</span>
+              </summary>
+              <ul class="bullets">
+                <li>CI/CD with GitHub Actions: matrix builds, self-hosted runners and custom actions; multi-arch Docker images on GHCR and Docker Hub.</li>
+                <li>DevSecOps gates on every pull request: gitleaks, SonarCloud, npm audit, Trivy (image and IaC), hadolint and OWASP ZAP; keyless AWS access via OIDC.</li>
+                <li>Kubernetes with probes, persistent volumes and HPA on KinD; GitOps delivery with Argo CD.</li>
+                <li>Terraform and Ansible for reproducible environments; Prometheus, Grafana, Loki, Tempo, Alertmanager and OpenTelemetry for observability.</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="s-main"><span class="s-co">Canon Production Printing</span><span class="s-role">Embedded Software Engineer</span><span class="s-loc">via Brunel · Venlo</span></span>
+                <span class="s-when">Apr – Aug 2025</span>
+              </summary>
+              <ul class="bullets">
+                <li>Designed control logic for sheet registration, print-belt synchronisation and error handling.</li>
+                <li>Implemented real-time control loops up to 500 Hz in C++ with RTist, integrating Simulink-generated models.</li>
+                <li>Built structured logging, diagnostics and calibration routines that sped up troubleshooting.</li>
+                <li>Validated edge cases with simulation tooling before hardware testing.</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="s-main"><span class="s-co">Philips</span><span class="s-role">Embedded Software Engineer</span><span class="s-loc">via Yacht · Eindhoven</span></span>
+                <span class="s-when">Jan 2024 – Jan 2025</span>
+              </summary>
+              <ul class="bullets">
+                <li>Extended STM32 firmware, including an SPI driver for external flash and RPC commands that automated hardware validation.</li>
+                <li>Maintained repositories and CI/CD workflows in Azure DevOps for automated builds and tests.</li>
+                <li>Debugged with GDB and Ozone; applied TDD/BDD with C++test unit testing.</li>
+                <li>Wrote design documentation in Enterprise Architect, Confluence and Windchill; took part in SAFe PI Planning.</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="s-main"><span class="s-co">Kverneland</span><span class="s-role">Embedded Software Engineer</span><span class="s-loc">via Yacht · Nieuw-Vennep</span></span>
+                <span class="s-when">Jun 2022 – Nov 2023</span>
+              </summary>
+              <ul class="bullets">
+                <li>Implemented engine-speed and cruise control over CAN/UDS.</li>
+                <li>Improved the tractor dashboard UI with Qt/QML.</li>
+                <li>Applied TDD with automated tests in the delivery workflow; demonstrated on real hardware every sprint and validated requirements on-site with customers.</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="s-main"><span class="s-co">Alstom</span><span class="s-role">Embedded Software Engineer</span><span class="s-loc">via Dekimo · Zuid-Holland</span></span>
+                <span class="s-when">Oct 2020 – Apr 2022</span>
+              </summary>
+              <ul class="bullets">
+                <li>Configured Jenkins pipelines, Git repositories and build machines for automated cross-platform builds.</li>
+                <li>Patched and migrated the diagnostic application to the latest Gentoo Linux, closing security gaps.</li>
+                <li>Administered Linux environments: firewall rules, system services and security configuration.</li>
+                <li>Led maintenance of the diagnostic application for H3 hybrid locomotives; designed tests across configurations and tested on-site.</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="s-main"><span class="s-co">Lely</span><span class="s-role">Embedded Software Engineer</span><span class="s-loc">via Dekimo · Zuid-Holland</span></span>
+                <span class="s-when">Nov 2019 – Jul 2020</span>
+              </summary>
+              <ul class="bullets">
+                <li>Migrated the milking-robot OS from Debian 8 (Jessie) to Debian 10 (Buster).</li>
+                <li>Hardened the application to run with least privilege; created boot-time system services.</li>
+                <li>Automated documentation templates with GitLab CI/CD and modernised the C++ codebase.</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="s-main"><span class="s-co">GE HealthCare</span><span class="s-role">Software Engineer</span><span class="s-loc">via Capgemini · Bengaluru</span></span>
+                <span class="s-when">Oct 2015 – Aug 2019</span>
+              </summary>
+              <ul class="bullets">
+                <li>Developed C++ middleware for data acquisition, processing and system integration on medical systems.</li>
+                <li>Turned product-owner input into requirements (SRS) and design documents (SDD).</li>
+                <li>Root-cause analysis, unit testing (CppUnit), code reviews and Doxygen documentation.</li>
+              </ul>
+            </details>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow c-blue">Capabilities</p>
+          <h2>Technical Proficiencies</h2>
+          <p class="section-sub">Production-tested toolchains, from embedded Linux and real-time C++ to cloud-native delivery.</p>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <h3><span class="ico ico-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg></span>Cloud &amp; IaC</h3>
+            <ul class="chips"><li>AWS</li><li>OIDC</li><li>Terraform</li><li>Ansible</li><li>Cloudflare</li></ul>
+          </div>
+          <div class="skill">
+            <h3><span class="ico ico-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></span>CI/CD &amp; DevSecOps</h3>
+            <ul class="chips"><li>GitHub Actions</li><li>Jenkins</li><li>GitLab CI</li><li>Azure DevOps</li><li>gitleaks</li><li>SonarCloud</li><li>Trivy</li><li>OWASP ZAP</li></ul>
+          </div>
+          <div class="skill">
+            <h3><span class="ico ico-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></span>Containers &amp; Orchestration</h3>
+            <ul class="chips"><li>Docker</li><li>Kubernetes</li><li>KinD</li><li>Argo CD</li><li>Kustomize</li><li>HPA</li><li>Health probes</li></ul>
+          </div>
+          <div class="skill skill-wide">
+            <h3><span class="ico ico-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span>Languages &amp; Embedded Systems</h3>
+            <ul class="chips"><li>C / C++</li><li>Python</li><li>Bash</li><li>Embedded Linux (Yocto / BSP)</li><li>Debian</li><li>Gentoo</li><li>systemd</li><li>RTist</li><li>Simulink</li><li>Qt / QML</li><li>CAN / UDS</li><li>SPI</li><li>STM32</li></ul>
+          </div>
+          <div class="skill">
+            <h3><span class="ico ico-ink" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></span>Observability &amp; Debugging</h3>
+            <ul class="chips"><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Tempo</li><li>OpenTelemetry</li><li>GDB</li><li>Ozone</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section section-alt section-tight" id="education">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow c-teal">Academic Background</p>
+          <h2>Education</h2>
+        </div>
+        <div class="edu">
+          <div class="edu-card">
+            <span class="edu-mark mark-blue" aria-hidden="true">M.T</span>
+            <div>
+              <p class="when">2013 – 2015</p>
+              <h3>MTech, Electrical, Electronics &amp; Communications Engineering</h3>
+              <p class="client">Rajiv Gandhi Prodyogiki Vishwavidyalaya, Bhopal, India</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <span class="edu-mark mark-teal" aria-hidden="true">B.E</span>
+            <div>
+              <p class="when">2008 – 2012</p>
+              <h3>BE, Electrical, Electronics &amp; Communications Engineering</h3>
+              <p class="client">Rajiv Gandhi Prodyogiki Vishwavidyalaya, Bhopal, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact -->
+  <footer class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <p class="eyebrow c-teal-light">Get In Touch</p>
+          <h2>Let&rsquo;s talk embedded systems, cloud infrastructure or DevSecOps.</h2>
+          <p class="contact-sub">Based in Helmond, in the Brainport Eindhoven region. Open to DevOps, Platform and DevSecOps roles in the Netherlands (hybrid) or remote within the EU. Dutch citizen, no sponsorship needed.</p>
+        </div>
+        <div class="contact-actions">
+          <button class="btn btn-blue btn-lg js-copy" type="button">Copy djchourey@gmail.com</button>
+          <a class="btn btn-outline btn-lg" href="mailto:djchourey@gmail.com">Open in Mail Client <span aria-hidden="true">&nearr;</span></a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div><p class="k">Email</p><a href="mailto:djchourey@gmail.com">djchourey@gmail.com</a></div>
+        <div><p class="k">LinkedIn</p><a href="https://www.linkedin.com/in/durgeshchourey" rel="noopener">linkedin.com/in/durgeshchourey</a></div>
+        <div><p class="k">Location</p><p>Helmond, Netherlands</p></div>
+      </div>
+      <div class="legal">
+        <p>&copy; <span id="year">2026</span> Durgesh Chourey</p>
+        <p>Plain HTML &amp; CSS · deployed to Cloudflare Pages by GitHub Actions</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Case study dialogs -->
+  <dialog class="modal" id="cs-belastingbuddy" aria-labelledby="t-bb">
+    <div class="modal-head">
       <div>
-        <h1 class="name"><a href="./">Durgesh Chourey</a></h1>
-        <p class="title">DevOps &amp; Platform Engineer</p>
-        <p class="tagline">I automate, secure and observe software delivery, with 10+ years of regulated engineering behind me.</p>
-
-        <nav class="toc" aria-label="Sections">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <p class="modal-meta"><span class="badge badge-blue">Cloud &amp; DevOps</span><span class="when">2026</span></p>
+        <h3 id="t-bb">BelastingBuddy: DevSecOps &amp; GitOps Platform</h3>
+        <p class="client">Personal project · <a href="https://belastingbuddy.com" rel="noopener">belastingbuddy.com</a> · <a href="https://github.com/choureydurgesh/belastingbuddy" rel="noopener">source</a></p>
       </div>
+      <form method="dialog"><button class="icon-btn" type="submit" aria-label="Close">&times;</button></form>
+    </div>
+    <div class="modal-body">
+      <div class="flow"><p class="k">System Architecture Flow</p><ol><li>PR gates</li><li>Multi-arch build</li><li>Trivy scan</li><li>GitOps commit</li><li>Argo CD &rarr; Kubernetes</li><li>Grafana LGTM</li></ol></div>
+      <h4>Context &amp; Objective</h4>
+      <p>Prove production-grade delivery end to end on a real product: every change is gated, built, scanned, deployed through GitOps and observable once it runs.</p>
+      <h4>Key Engineering Contributions</h4>
+      <ul class="bullets">
+        <li>GitHub Actions pipeline with ten gates per pull request: lint, unit tests, hadolint, gitleaks, dependency scan, Terraform and Kubernetes validation, Trivy misconfiguration scan, OWASP ZAP and SonarCloud. Merge to deployed in under five minutes.</li>
+        <li>Multi-stage, non-root nginx image for amd64 and arm64, published to GHCR and Docker Hub. Trivy flagged six HIGH/CRITICAL CVEs in the base image, fixed before release.</li>
+        <li>GitOps: CI commits the new image tag and Argo CD syncs Kustomize dev and prod overlays with HPA, PodDisruptionBudget and Ingress.</li>
+        <li>Terraform and Ansible for infrastructure; keyless AWS access from CI through OIDC.</li>
+        <li>Prometheus, Loki, Tempo, OpenTelemetry and Alertmanager with RED metrics and a 99.9% availability SLO. SonarCloud gate passing at 95.5% coverage.</li>
+      </ul>
+      <h4>Technologies &amp; Tooling</h4>
+      <ul class="chips"><li>GitHub Actions</li><li>Docker</li><li>Kubernetes</li><li>Argo CD</li><li>Kustomize</li><li>Terraform</li><li>Ansible</li><li>Trivy</li><li>SonarCloud</li><li>OWASP ZAP</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Tempo</li></ul>
+    </div>
+  </dialog>
 
-      <div class="side-foot">
-        <p class="status"><span class="dot"></span>Open to roles in NL (hybrid) and EU (remote)</p>
-        <ul class="links">
-          <li><a href="https://github.com/choureydurgesh" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/durgeshchourey" rel="noopener">LinkedIn</a></li>
-          <li><a href="mailto:djchourey@gmail.com">Email</a></li>
-        </ul>
+  <dialog class="modal" id="cs-klaarvoornl" aria-labelledby="t-kv">
+    <div class="modal-head">
+      <div>
+        <p class="modal-meta"><span class="badge badge-blue">Cloud &amp; DevOps</span><span class="when">2026</span></p>
+        <h3 id="t-kv">KlaarVoorNL: Dutch Learning Platform</h3>
+        <p class="client">Personal project · <a href="https://www.klaarvoornl.com" rel="noopener">klaarvoornl.com</a></p>
       </div>
-    </header>
+      <form method="dialog"><button class="icon-btn" type="submit" aria-label="Close">&times;</button></form>
+    </div>
+    <div class="modal-body">
+      <div class="flow"><p class="k">System Architecture Flow</p><ol><li>Next.js app</li><li>Server-side grading API</li><li>Supabase auth &amp; storage</li><li>Claude API feedback</li><li>Playwright E2E</li></ol></div>
+      <h4>Context &amp; Objective</h4>
+      <p>Help newcomers prepare for the Inburgeringsexamen and Staatsexamen NT2 with a clear route from A0 to B2 and realistic, timed practice exams.</p>
+      <h4>Key Engineering Contributions</h4>
+      <ul class="bullets">
+        <li>Exam engines for reading, listening, KNM, writing and speaking, graded server-side so answer keys never reach the browser.</li>
+        <li>AI writing feedback through the Claude API, scored on content, structure, vocabulary, grammar and register, with per-IP rate limiting.</li>
+        <li>Supabase magic-link accounts, cloud sync and private recording storage; a real-time multiplayer word quiz over Supabase Realtime.</li>
+        <li>Demo mode without any backend, and an end-to-end Playwright test that crawls every page and sits every exam.</li>
+      </ul>
+      <h4>Technologies &amp; Tooling</h4>
+      <ul class="chips"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Claude API</li><li>Zod</li><li>Playwright</li></ul>
+    </div>
+  </dialog>
 
-    <main class="content" id="content">
-      <section id="about">
-        <h2 class="label">About</h2>
-        <p>I'm a DevOps and platform engineer based in Helmond, near Eindhoven. I build delivery pipelines and platforms that are automated, secure and observable, from the first commit to production.</p>
-        <p>For more than ten years I built and tested Linux software for machines where failure is expensive: medical imaging at <b>GE HealthCare</b>, medical devices at <b>Philips</b>, hybrid locomotives at <b>Alstom</b>, milking robots at <b>Lely</b> and lithography test benches at <b>ASML</b>. Regulated work taught me to make every step traceable and repeatable.</p>
-        <p>I now bring that discipline to cloud infrastructure. To show it, I built <a href="#projects">BelastingBuddy</a> and run it like a production platform: security gates on every pull request, GitOps delivery to Kubernetes, and metrics, logs and traces for everything that runs.</p>
-      </section>
+  <dialog class="modal" id="cs-canon" aria-labelledby="t-canon">
+    <div class="modal-head">
+      <div>
+        <p class="modal-meta"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">Apr – Aug 2025</span></p>
+        <h3 id="t-canon">500 Hz High-Speed Media Transport Control</h3>
+        <p class="client">Canon Production Printing · via Brunel · Venlo</p>
+      </div>
+      <form method="dialog"><button class="icon-btn" type="submit" aria-label="Close">&times;</button></form>
+    </div>
+    <div class="modal-body">
+      <div class="flow"><p class="k">System Architecture Flow</p><ol><li>RTist / Simulink models</li><li>500 Hz C++ control loop</li><li>Motors &amp; vacuum actuators</li><li>Structured diagnostics</li></ol></div>
+      <h4>Context &amp; Objective</h4>
+      <p>Media-handling software for a high-speed production printing platform, where sheet registration and belt synchronisation must be precise and faults must be recoverable.</p>
+      <h4>Key Engineering Contributions</h4>
+      <ul class="bullets">
+        <li>Designed control logic for sheet registration, print-belt synchronisation and error handling.</li>
+        <li>Implemented real-time control loops up to 500 Hz in C++ with RTist, integrating Simulink-generated models.</li>
+        <li>Built structured logging, diagnostics and calibration routines that sped up troubleshooting.</li>
+        <li>Validated edge cases with simulation tooling before hardware testing.</li>
+      </ul>
+      <h4>Technologies &amp; Tooling</h4>
+      <ul class="chips"><li>C++</li><li>RTist</li><li>Simulink</li><li>Real-time control</li><li>Simulation</li><li>Structured logging</li></ul>
+    </div>
+  </dialog>
 
-      <section id="experience">
-        <h2 class="label">Experience</h2>
-        <ol class="list">
-          <li class="item">
-            <p class="when">2026 — Now</p>
-            <div>
-              <h3>Software Integration &amp; Test Automation Engineer · ASML</h3>
-              <p class="via">via Brunel · Eindhoven</p>
-              <p>Building a software test framework that automates validation of lithography system test benches, and integrating and verifying software on Linux.</p>
-            </div>
-          </li>
-          <li class="item">
-            <p class="when">2026</p>
-            <div>
-              <h3>DevOps &amp; Platform Engineer, upskilling · Brunel</h3>
-              <p class="via">Eindhoven</p>
-              <p>Retrained in DevOps and platform engineering between client assignments and built BelastingBuddy as a production-style platform.</p>
-              <ul class="tags"><li>GitHub Actions</li><li>Kubernetes</li><li>Argo CD</li><li>Terraform</li><li>Ansible</li><li>Grafana</li></ul>
-            </div>
-          </li>
-          <li class="item">
-            <p class="when">2025</p>
-            <div>
-              <h3>Embedded Software Engineer · Canon Production Printing</h3>
-              <p class="via">via Brunel · Venlo</p>
-              <p>Real-time control loops up to 500 Hz in C++ for a high-speed printing platform, with structured logging and diagnostics that sped up troubleshooting.</p>
-            </div>
-          </li>
-          <li class="item">
-            <p class="when">2024 — 2025</p>
-            <div>
-              <h3>Embedded Software Engineer · Philips</h3>
-              <p class="via">via Yacht · Eindhoven</p>
-              <p>Medical device firmware in a regulated SAFe environment. Maintained Azure DevOps CI/CD for automated builds and tests, and built RPC commands that automated hardware validation.</p>
-              <ul class="tags"><li>Azure DevOps</li><li>C++</li><li>STM32</li><li>TDD</li></ul>
-            </div>
-          </li>
-          <li class="item">
-            <p class="when">2022 — 2023</p>
-            <div>
-              <h3>Embedded Software Engineer · Kverneland</h3>
-              <p class="via">via Yacht · Nieuw-Vennep</p>
-              <p>Engine-speed and cruise control over CAN/UDS for agricultural machinery, with TDD and automated tests in the delivery workflow.</p>
-            </div>
-          </li>
-          <li class="item">
-            <p class="when">2020 — 2022</p>
-            <div>
-              <h3>Embedded Software Engineer · Alstom</h3>
-              <p class="via">via Dekimo</p>
-              <p>Set up Jenkins pipelines and build machines for cross-platform builds, migrated to the latest Gentoo Linux to close security gaps, and administered firewalls and system services.</p>
-              <ul class="tags"><li>Jenkins</li><li>Gentoo</li><li>Linux hardening</li></ul>
-            </div>
-          </li>
-          <li class="item">
-            <p class="when">2019 — 2020</p>
-            <div>
-              <h3>Embedded Software Engineer · Lely</h3>
-              <p class="via">via Dekimo</p>
-              <p>Migrated the milking-robot OS from Debian 8 to 10, hardened the application to run with least privilege, and automated documentation with GitLab CI/CD.</p>
-              <ul class="tags"><li>Debian</li><li>GitLab CI</li><li>systemd</li></ul>
-            </div>
-          </li>
-          <li class="item">
-            <p class="when">2015 — 2019</p>
-            <div>
-              <h3>Software Engineer · GE HealthCare</h3>
-              <p class="via">via Capgemini · Bengaluru</p>
-              <p>C++ middleware for medical imaging systems on Linux, from requirements (SRS/SDD) through unit testing, code review and root-cause analysis.</p>
-            </div>
-          </li>
-        </ol>
-        <p class="aside">MTech and BE, Electrical, Electronics &amp; Communications Engineering, Rajiv Gandhi Prodyogiki Vishwavidyalaya. English (fluent), Hindi (native), Dutch (beginner).</p>
-      </section>
+  <dialog class="modal" id="cs-philips" aria-labelledby="t-philips">
+    <div class="modal-head">
+      <div>
+        <p class="modal-meta"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">Jan 2024 – Jan 2025</span></p>
+        <h3 id="t-philips">Medical Device Firmware &amp; CI/CD</h3>
+        <p class="client">Philips · via Yacht · Eindhoven</p>
+      </div>
+      <form method="dialog"><button class="icon-btn" type="submit" aria-label="Close">&times;</button></form>
+    </div>
+    <div class="modal-body">
+      <div class="flow"><p class="k">System Architecture Flow</p><ol><li>STM32 C++ firmware</li><li>SPI external flash</li><li>RPC test commands</li><li>Azure DevOps CI</li></ol></div>
+      <h4>Context &amp; Objective</h4>
+      <p>Firmware for an IPL medical device in a regulated SAFe environment, where every change needs tests, documentation and traceability.</p>
+      <h4>Key Engineering Contributions</h4>
+      <ul class="bullets">
+        <li>Extended STM32 firmware, including an SPI driver for external flash.</li>
+        <li>Built RPC commands that automated hardware validation.</li>
+        <li>Maintained repositories and Azure DevOps CI/CD for automated builds and tests.</li>
+        <li>Debugged with GDB and Ozone; applied TDD/BDD with C++test.</li>
+        <li>Documented designs in Enterprise Architect, Confluence and Windchill; took part in PI Planning.</li>
+      </ul>
+      <h4>Technologies &amp; Tooling</h4>
+      <ul class="chips"><li>C++</li><li>STM32</li><li>SPI</li><li>Azure DevOps</li><li>GDB</li><li>Ozone</li><li>C++test</li></ul>
+    </div>
+  </dialog>
 
-      <section id="projects">
-        <h2 class="label">Projects</h2>
-        <ol class="list">
-          <li class="item project">
-            <a class="thumb" href="https://github.com/choureydurgesh/belastingbuddy" rel="noopener"><img src="assets/ci-pipeline.jpg" alt="GitHub Actions run of the BelastingBuddy pipeline, all jobs passing" loading="lazy" width="1180" height="700"></a>
-            <div>
-              <h3><a href="https://belastingbuddy.com" rel="noopener">BelastingBuddy ↗</a></h3>
-              <p>A Dutch tax-return guide for expats, run as a production-style platform. Every pull request passes ten security and quality gates (gitleaks, hadolint, SonarCloud, OWASP ZAP and more). Every merge is built for amd64 and arm64, scanned with Trivy and delivered to Kubernetes through Argo CD. Prometheus, Loki and Tempo cover metrics, logs and traces.</p>
-              <p class="figures">10 CI gates · merge to deploy &lt; 5 min · 95.5% test coverage</p>
-              <ul class="tags"><li>GitHub Actions</li><li>Docker</li><li>Kubernetes</li><li>Argo CD</li><li>Terraform</li><li>Ansible</li><li>Trivy</li><li>Grafana LGTM</li></ul>
-              <p class="more"><a href="https://github.com/choureydurgesh/belastingbuddy" rel="noopener">Source on GitHub</a></p>
-            </div>
-          </li>
-          <li class="item project">
-            <a class="thumb" href="https://www.klaarvoornl.com" rel="noopener"><img src="assets/klaarvoornl.jpg" alt="KlaarVoorNL home page" loading="lazy" width="1440" height="900"></a>
-            <div>
-              <h3><a href="https://www.klaarvoornl.com" rel="noopener">KlaarVoorNL ↗</a></h3>
-              <p>A Dutch learning platform from A0 to B2, with practice exams for the Inburgeringsexamen and Staatsexamen NT2. Exams are graded server-side so answer keys never reach the browser. It also has AI writing feedback through the Claude API, Supabase accounts, a real-time multiplayer quiz, and a Playwright test that sits every exam.</p>
-              <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Claude API</li><li>Playwright</li></ul>
-            </div>
-          </li>
-        </ol>
-      </section>
+  <dialog class="modal" id="cs-rail" aria-labelledby="t-rail">
+    <div class="modal-head">
+      <div>
+        <p class="modal-meta"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">Nov 2019 – Apr 2022</span></p>
+        <h3 id="t-rail">Rail &amp; Robotics Embedded Linux</h3>
+        <p class="client">Alstom and Lely · via Dekimo</p>
+      </div>
+      <form method="dialog"><button class="icon-btn" type="submit" aria-label="Close">&times;</button></form>
+    </div>
+    <div class="modal-body">
+      <div class="flow"><p class="k">System Architecture Flow</p><ol><li>Embedded Linux (Gentoo / Debian)</li><li>Jenkins build automation</li><li>Firewall &amp; least privilege</li><li>On-site validation</li></ol></div>
+      <h4>Context &amp; Objective</h4>
+      <p>Keep long-lived embedded Linux platforms secure and reproducible: diagnostics for hybrid locomotives at Alstom and the operating system of Lely's milking robots.</p>
+      <h4>Key Engineering Contributions</h4>
+      <ul class="bullets">
+        <li>Alstom: configured Jenkins pipelines, Git repositories and build machines for automated cross-platform builds.</li>
+        <li>Alstom: patched and migrated the diagnostic application to the latest Gentoo Linux to close security gaps; administered firewall rules and system services; tested on-site across locomotive configurations.</li>
+        <li>Lely: migrated the robot OS from Debian 8 to Debian 10, hardened the application to run with least privilege and created boot-time system services.</li>
+        <li>Lely: automated documentation templates with GitLab CI/CD and modernised the C++ codebase.</li>
+      </ul>
+      <h4>Technologies &amp; Tooling</h4>
+      <ul class="chips"><li>Embedded Linux</li><li>Gentoo</li><li>Debian</li><li>systemd</li><li>Jenkins</li><li>GitLab CI</li><li>C++</li></ul>
+    </div>
+  </dialog>
 
-      <section id="contact">
-        <h2 class="label">Contact</h2>
-        <p>I'm looking for DevOps, Platform or DevSecOps roles in the Netherlands (hybrid) or remote within the EU. I'm a Dutch citizen, so no sponsorship is needed.</p>
-        <p>The quickest way to reach me is by <a href="mailto:djchourey@gmail.com">email</a> or on <a href="https://www.linkedin.com/in/durgeshchourey" rel="noopener">LinkedIn</a>.</p>
-      </section>
+  <dialog class="modal" id="cs-ge" aria-labelledby="t-ge">
+    <div class="modal-head">
+      <div>
+        <p class="modal-meta"><span class="badge badge-teal">Embedded &amp; Real-Time</span><span class="when">Oct 2015 – Aug 2019</span></p>
+        <h3 id="t-ge">Medical Imaging Middleware</h3>
+        <p class="client">GE HealthCare · via Capgemini · Bengaluru</p>
+      </div>
+      <form method="dialog"><button class="icon-btn" type="submit" aria-label="Close">&times;</button></form>
+    </div>
+    <div class="modal-body">
+      <div class="flow"><p class="k">System Architecture Flow</p><ol><li>Sensor adapters</li><li>C++ OO middleware</li><li>Processing &amp; hand-off</li><li>Unit-test verification</li></ol></div>
+      <h4>Context &amp; Objective</h4>
+      <p>Reliable acquisition and hand-off of patient data in medical systems on Linux, built and documented to medical-device standards.</p>
+      <h4>Key Engineering Contributions</h4>
+      <ul class="bullets">
+        <li>Developed C++ middleware for data acquisition, processing and system integration.</li>
+        <li>Turned product-owner input into requirements (SRS) and design documents (SDD).</li>
+        <li>Root-cause analysis, unit testing with CppUnit, code reviews and Doxygen documentation.</li>
+        <li>Demonstrated features on hardware to clients at the end of each sprint.</li>
+      </ul>
+      <h4>Technologies &amp; Tooling</h4>
+      <ul class="chips"><li>C++</li><li>Linux</li><li>OO design</li><li>CppUnit</li><li>Doxygen</li><li>SRS / SDD</li></ul>
+    </div>
+  </dialog>
 
-      <footer class="foot">
-        <p>Plain HTML and CSS, set in Geist, deployed to Cloudflare Pages by GitHub Actions. No cookies, no tracking.</p>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // Highlight the section currently in view in the side navigation.
-    const links = [...document.querySelectorAll('.toc a')];
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) links.forEach((a) => a.classList.toggle('active', a.hash === '#' + e.target.id));
-      });
-    }, { rootMargin: '-35% 0px -60% 0px' });
-    document.querySelectorAll('main section').forEach((s) => io.observe(s));
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>
