@@ -1,31 +1,20 @@
 # durgeshchourey.com
 
-My portfolio and learning-in-public site: Software Engineer → DevOps & DevSecOps.
+Personal portfolio of Durgesh Chourey, a DevOps, Platform and DevSecOps engineer.
 
-**Stack:** Next.js (App Router) · TypeScript · Tailwind CSS · deployed on Vercel · DNS and registrar on Cloudflare.
+It's a plain static site: one HTML page, one stylesheet, no framework, no cookies and no tracking.
 
-## Run it
+## Run it locally
 
-```bash
-npm install
-npm run dev        # http://localhost:3000
+```sh
+npx serve .
 ```
 
-## Update content
+## How it ships
 
-All text lives in `src/content/profile.ts`: roadmap stages, projects, experience, skills and certifications.
-Change a stage or cert `status` to `'now'` or `'done'` as you progress; no component changes needed.
+Every pull request runs gitleaks, HTML validation and a link check. A merge to `main` deploys to Cloudflare Pages (`.github/workflows/site.yml`).
 
-## Security
+The deploy needs two repository secrets:
 
-`next.config.mjs` sends security headers on every response: Content-Security-Policy, HSTS, X-Frame-Options,
-X-Content-Type-Options, Referrer-Policy and Permissions-Policy. Check the result at https://securityheaders.com.
-
-## Roadmap for this site
-
-| Stage | Change |
-|---|---|
-| 2: Cloud basics | AWS twin: static export on S3 + CloudFront + ACM, and an Azure Static Web Apps copy |
-| 3: CI/CD | GitHub Actions: lint, typecheck, build, Gitleaks on every push |
-| 4: Terraform | All cloud resources and DNS as code |
-| 6: DevSecOps | OWASP ZAP scan in the pipeline, SBOM for dependencies |
+- `CLOUDFLARE_API_TOKEN`: an API token with the **Cloudflare Pages: Edit** permission
+- `CLOUDFLARE_ACCOUNT_ID`

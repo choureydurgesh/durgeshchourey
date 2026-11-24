@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Durgesh Chourey · DevOps, Platform &amp; DevSecOps Engineer</title>
+  <meta name="description" content="DevOps, Platform and DevSecOps engineer with 10+ years building Linux software for regulated machines: medical devices, locomotives, milking robots and lithography. Based in Helmond, open to NL hybrid and EU remote.">
+  <link rel="canonical" href="https://durgeshchourey.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://durgeshchourey.com/">
+  <meta property="og:title" content="Durgesh Chourey · DevOps, Platform &amp; DevSecOps Engineer">
+  <meta property="og:description" content="10+ years of Linux software for machines where failure is expensive. Now automating, securing and observing cloud systems from commit to production.">
+  <meta property="og:image" content="https://durgeshchourey.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b0f1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="mark" href="#top" aria-label="Durgesh Chourey, home"><span class="mono">DC</span><span class="mark-name">Durgesh Chourey</span></a>
+      <nav aria-label="Main">
+        <a href="#project">Project</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a class="btn btn-small" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">DevOps · Platform · DevSecOps Engineer</p>
+        <h1>I build pipelines that <em>prove what they did.</em></h1>
+        <p class="lead">For 10+ years I've built and tested Linux software for machines where failure is expensive: medical devices, locomotives, milking robots and lithography test benches. Now I bring that same discipline to cloud infrastructure, automating, securing and observing systems from commit to production.</p>
+        <ul class="facts">
+          <li>Helmond · Eindhoven region</li>
+          <li>Open to NL hybrid &amp; EU remote</li>
+          <li>Dutch citizen · no sponsorship needed</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="#project">See the platform I built</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/durgeshchourey" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/choureydurgesh" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHERE -->
+    <section class="where" aria-label="Where I've worked">
+      <div class="wrap">
+        <p class="where-label">Software I've worked on runs in machines at</p>
+        <ul class="where-list">
+          <li>ASML</li><li>Philips</li><li>GE HealthCare</li><li>Alstom</li><li>Lely</li><li>Canon Production Printing</li><li>Kverneland</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section class="section" id="project">
+      <div class="wrap">
+        <p class="kicker">Featured project</p>
+        <h2>BelastingBuddy</h2>
+        <p class="section-lead">A Dutch tax-return guide for expats, built and run as a production-style platform. The app is simple on purpose. The point is everything around it: every merge is scanned, built, signed off by quality gates and delivered through GitOps, and the result can be observed end to end.</p>
+
+        <div class="stats">
+          <div class="stat"><span class="num">10</span><span class="lbl">gated CI jobs on every pull request</span></div>
+          <div class="stat"><span class="num">&lt;5 min</span><span class="lbl">from merge to deployed</span></div>
+          <div class="stat"><span class="num">95.5%</span><span class="lbl">test coverage, SonarCloud gate passed</span></div>
+          <div class="stat"><span class="num">0</span><span class="lbl">open security issues</span></div>
+        </div>
+
+        <h3 class="sub">How a change reaches production</h3>
+        <ol class="flow">
+          <li><span class="step">Commit</span><span class="tools">pull request</span></li>
+          <li><span class="step">Security gates</span><span class="tools">gitleaks · hadolint · SonarCloud · npm audit · OWASP ZAP</span></li>
+          <li><span class="step">Build</span><span class="tools">multi-arch image · amd64 + arm64</span></li>
+          <li><span class="step">Scan</span><span class="tools">Trivy · image + IaC</span></li>
+          <li><span class="step">GitOps</span><span class="tools">CI commits the new tag</span></li>
+          <li><span class="step">Deploy</span><span class="tools">Argo CD → Kubernetes</span></li>
+          <li><span class="step">Observe</span><span class="tools">Prometheus · Loki · Tempo · Grafana</span></li>
+        </ol>
+
+        <div class="gallery">
+          <figure class="shot shot-wide">
+            <img src="assets/ci-pipeline.jpg" alt="GitHub Actions run graph: lint, docker-lint, secrets-scan, dependency-scan, iac-validate, iac-security, DAST and Sonar jobs, then build-and-push, Trivy scan and GitOps update, all passing in 4 minutes 46 seconds." loading="lazy" width="1180" height="700">
+            <figcaption><b>CI/CD</b> All gates green, merge to deploy in 4m 46s.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/01-home.jpg" alt="BelastingBuddy home page: Dutch taxes, without the Dutch." loading="lazy" width="1600" height="1000">
+            <figcaption><b>The app</b> Next.js, plain English.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/11-sonarcloud.jpg" alt="SonarCloud summary: quality gate passed, 0 security issues, 95.5% coverage, 0.6% duplication." loading="lazy" width="1600" height="1000">
+            <figcaption><b>Quality gate</b> SonarCloud blocks the merge if it fails.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/argocd.jpg" alt="Argo CD resource tree for the belastingbuddy application: deployment, service, ingress, HPA, PDB, ServiceMonitor and PrometheusRule." loading="lazy" width="1600" height="1112">
+            <figcaption><b>GitOps</b> Argo CD syncs Kustomize overlays.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/21-grafana-red-logs-traces.jpg" alt="Grafana dashboard: site up, 100% availability against a 99.9% SLO, requests per second, probe response time and OpenTelemetry spans." loading="lazy" width="1600" height="1000">
+            <figcaption><b>Observability</b> SLOs, RED metrics, logs and traces.</figcaption>
+          </figure>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="https://belastingbuddy.com" rel="noopener">Visit belastingbuddy.com</a>
+          <a class="btn btn-ghost" href="https://github.com/choureydurgesh/belastingbuddy" rel="noopener">Read the code</a>
+        </div>
+
+        <article class="project2">
+          <div>
+            <p class="kicker">Also built</p>
+            <h3>KlaarVoorNL</h3>
+            <p>A Dutch learning platform from A0 to B2, with practice exams for the Inburgeringsexamen and Staatsexamen NT2. I built it because I'm learning Dutch myself.</p>
+            <ul class="ticks">
+              <li>Exam engines for reading, listening, KNM, writing and speaking, with server-side grading so answer keys never reach the browser</li>
+              <li>AI writing feedback through the Claude API, with per-IP rate limiting</li>
+              <li>Accounts and cloud sync on Supabase, plus a real-time multiplayer word quiz over Supabase Realtime</li>
+              <li>An end-to-end Playwright test that crawls every page and sits every exam</li>
+            </ul>
+          </div>
+          <div class="cta">
+            <a class="btn" href="https://www.klaarvoornl.com" rel="noopener">Visit klaarvoornl.com</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section alt" id="skills">
+      <div class="wrap">
+        <p class="kicker">What I bring</p>
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill"><h3>CI/CD</h3><p>GitHub Actions (matrix builds, self-hosted runners, custom actions), Jenkins, GitLab CI, Azure DevOps</p></div>
+          <div class="skill"><h3>Platform</h3><p>Docker, Kubernetes, Argo CD (GitOps), Kustomize, Terraform, Ansible, AWS</p></div>
+          <div class="skill"><h3>DevSecOps</h3><p>Secret scanning, SAST, DAST, container and IaC scanning, OIDC-based keyless cloud access</p></div>
+          <div class="skill"><h3>Observability</h3><p>Prometheus, Grafana, Loki, Tempo, Alertmanager, OpenTelemetry, SLOs</p></div>
+          <div class="skill"><h3>Linux, deeply</h3><p>OS migrations (Debian 8→10, Gentoo), system services, firewalls, least-privilege hardening, Yocto/BSP</p></div>
+          <div class="skill"><h3>Regulated delivery</h3><p>Medical and rail: documentation, traceability, TDD, and getting it right the first time. Python, Bash, C++</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <p class="kicker">10+ years</p>
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li>
+            <div class="when">Sep 2026 – now</div>
+            <div class="what">
+              <h3>Software Integration &amp; Test Automation Engineer <span class="at">ASML · via Brunel</span></h3>
+              <p>Building a software test framework that automates validation of lithography system test benches, and integrating and verifying software on Linux.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when">Jan – Aug 2026</div>
+            <div class="what">
+              <h3>DevOps &amp; Platform Engineer, upskilling <span class="at">Brunel</span></h3>
+              <p>Retrained in DevOps and platform engineering and built BelastingBuddy as a production-style platform: CI/CD, DevSecOps gates, Kubernetes with Argo CD, Terraform, Ansible and the Grafana LGTM stack.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when">Apr – Aug 2025</div>
+            <div class="what">
+              <h3>Embedded Software Engineer <span class="at">Canon Production Printing · via Brunel</span></h3>
+              <p>Real-time control loops (up to 500 Hz) in C++ for a high-speed printing platform, plus structured logging and diagnostics that sped up troubleshooting.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when">2024 – 2025</div>
+            <div class="what">
+              <h3>Embedded Software Engineer <span class="at">Philips · via Yacht</span></h3>
+              <p>Medical device firmware in a regulated SAFe environment. Maintained Azure DevOps CI/CD for automated builds and tests, and built RPC commands that automated hardware validation.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when">2022 – 2023</div>
+            <div class="what">
+              <h3>Embedded Software Engineer <span class="at">Kverneland · via Yacht</span></h3>
+              <p>Engine-speed and cruise control over CAN/UDS for agricultural machinery, with TDD and automated tests built into the delivery workflow.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when">2020 – 2022</div>
+            <div class="what">
+              <h3>Embedded Software Engineer <span class="at">Alstom · via Dekimo</span></h3>
+              <p>Configured Jenkins pipelines and build machines for cross-platform builds, migrated to the latest Gentoo Linux to close security gaps, and administered firewalls and services.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when">2019 – 2020</div>
+            <div class="what">
+              <h3>Embedded Software Engineer <span class="at">Lely · via Dekimo</span></h3>
+              <p>Migrated the milking-robot OS from Debian 8 to 10, hardened the application to run with least privilege, and automated documentation with GitLab CI/CD.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when">2015 – 2019</div>
+            <div class="what">
+              <h3>Software Engineer <span class="at">GE HealthCare · via Capgemini</span></h3>
+              <p>C++ middleware for medical imaging systems on Linux, from requirements (SRS/SDD) through unit testing, code review and root-cause analysis.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="edu"><b>Education</b> MTech (2015) and BE (2012), Electrical, Electronics &amp; Communications Engineering, Rajiv Gandhi Prodyogiki Vishwavidyalaya</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <h2>Let's talk.</h2>
+        <p class="section-lead">I'm looking for DevOps, Platform or DevSecOps roles in the Netherlands (hybrid) or remote within the EU. English fluent · Hindi native · Dutch beginner.</p>
+        <div class="cta">
+          <a class="btn" href="mailto:djchourey@gmail.com">djchourey@gmail.com</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/durgeshchourey" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/choureydurgesh" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">© <span id="y">2026</span> Durgesh Chourey · Static site, no cookies, no tracking.</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
