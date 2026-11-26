@@ -390,3 +390,12 @@ details[open] .s-when::after { transform: rotate(-135deg) translateY(-2px); }
   .d-t { font-size: 17px; }
   .d-h { font-size: 14px; letter-spacing: .02em; }
 }
+
+/* Hero copy scaled to match the larger architecture card */
+.pill { font-size: 13px; padding: 9px 16px; border-radius: 22px; line-height: 1.5; }
+.pill .pulse { flex: none; }
+h1 { font-size: clamp(40px, 5.2vw, 60px); }
+.hero-role { font-size: clamp(19px, 2vw, 23px); }
+.hero-sum { font-size: 17px; line-height: 1.7; }
+.hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 520px; }
+.hero-actions .btn { padding: 15px 20px; font-size: 15px; width: 100%; }
