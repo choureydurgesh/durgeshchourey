@@ -134,15 +134,15 @@ h1 { font-size: clamp(38px, 5.2vw, 54px); font-weight: 800; letter-spacing: -0.0
 
 .arch-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; box-shadow: var(--shadow-lg); }
 .arch-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--line); }
-.arch-title { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); }
+.arch-title { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 14px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--text-2); }
 .sq { width: 10px; height: 10px; border-radius: 50%; background: var(--blue); }
-.arch-tag { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 5px; background: var(--surface-2); color: var(--text-3); }
+.arch-tag { font-family: var(--mono); font-size: 13px; padding: 2px 8px; border-radius: 5px; background: var(--surface-2); color: var(--text-3); }
 .arch { width: 100%; height: auto; font-family: var(--mono); }
 .d-box { fill: var(--surface-2); stroke: var(--line-2); stroke-width: 1.2; }
 .d-pill { fill: var(--surface); stroke: var(--line-2); }
-.d-t { fill: var(--text-2); font-size: 10px; text-anchor: middle; }
+.d-t { fill: var(--text-2); font-size: 14px; text-anchor: middle; }
 [data-theme="dark"] .d-t { fill: #e2e8f0; }
-.d-h { font-size: 10px; font-weight: 600; letter-spacing: .06em; }
+.d-h { font-size: 12.5px; font-weight: 600; letter-spacing: .04em; }
 .d-h-teal { fill: var(--teal-ink); }
 .d-h-blue { fill: var(--blue-ink); }
 .d-h-ink { fill: var(--text-2); }
